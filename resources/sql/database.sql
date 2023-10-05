@@ -1,17 +1,10 @@
-create database Log;
+create database duck;
+use duck;
 
-use log;
-
-create table user
-(id int primary key auto_increment,
-usuario varchar(30),
-senha varchar (10));
-
-select * from user;
-
-insert into user (usuario,senha) values ('julia','123');
-insert into user (usuario,senha) values ('nini','123');
-
-
-
+CREATE TABLE users (
+    user_id INT auto_increment,
+    username VARCHAR(45),
+    password VARCHAR(45),
+    PRIMARY KEY (`user_id`)
+    );
 
