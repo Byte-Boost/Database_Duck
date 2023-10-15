@@ -1,17 +1,18 @@
-create database Log;
+create database duck;
+use duck;
 
-use log;
+CREATE TABLE users (
+    user_id INT auto_increment,
+    username VARCHAR(45) NOT NULL,
+    password VARCHAR(45) NOT NULL,
+    PRIMARY KEY (`user_id`)
+    );
 
-create table user
-(id int primary key auto_increment,
-usuario varchar(30),
-senha varchar (10));
-
-select * from user;
-
-insert into user (usuario,senha) values ('julia','123');
-insert into user (usuario,senha) values ('nini','123');
-
-
-
-
+CREATE TABLE activity_register(
+    registry_id INT auto_increment,
+    user_id INT NOT NULL,
+    document_title VARCHAR(50) NOT NULL,
+    access_date DATE NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    PRIMARY KEY (`registry_id`)
+);
