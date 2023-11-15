@@ -5,6 +5,7 @@ CREATE TABLE users (
     user_id INT auto_increment,
     username VARCHAR(45) NOT NULL,
     password VARCHAR(45) NOT NULL,
+    salt VARCHAR(60) NOT NULL,
     PRIMARY KEY (`user_id`)
     );
 
